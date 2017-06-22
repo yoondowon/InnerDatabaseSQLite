@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.innerdatabasesqlite.MainActivity">
+
+    <TextView
+        android:id="@+id/text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID: "
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_toRightOf="@+id/text_id"
+        />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAME: "
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_id"
+        android:layout_alignLeft="@+id/text_id"
+        />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/text_name"
+        android:layout_alignBottom="@+id/text_name"
+        android:layout_alignEnd="@+id/edit_id"
+        android:layout_toEndOf="@+id/text_name" />
+
+    <TextView
+        android:id="@+id/text_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AGE: "
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_name"
+        android:layout_alignLeft="@+id/text_name"
+        />
+
+    <EditText
+        android:id="@+id/edit_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/text_age"
+        android:layout_alignBottom="@+id/text_age"
+        android:layout_alignEnd="@+id/check_woman"
+        android:layout_toEndOf="@+id/text_age" />
+
+    <TextView
+        android:id="@+id/text_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GENDER: "
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_age"
+        android:layout_alignLeft="@+id/text_age"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Man"
+        android:textSize="15dp"
+        android:id="@+id/check_man"
+        android:layout_toRightOf="@+id/text_gender"
+        android:layout_alignBottom="@+id/text_gender"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/text_gender" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Woman"
+        android:textSize="15dp"
+        android:id="@+id/check_woman"
+        android:layout_toRightOf="@+id/check_man"
+        android:layout_alignBottom="@+id/text_gender"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/text_gender" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/text_gender"
+        android:layout_marginTop="20dp"
+        android:background="#AAAAAA"/>
+
+    <TextView
+        android:id="@+id/text_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort by "
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/text_name"
+        android:layout_below="@+id/line1"/>
+
+    <CheckBox
+        android:id="@+id/check_userid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/text_sort"
+        android:layout_alignBottom="@+id/text_sort"
+        android:layout_marginLeft="3dp"
+        android:layout_alignTop="@+id/text_sort" />
+
+
+    <CheckBox
+        android:id="@+id/check_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/check_userid"
+        android:layout_alignBottom="@+id/text_sort"
+        android:layout_marginLeft="3dp"
+        android:layout_alignTop="@+id/text_sort" />
+
+
+    <CheckBox
+        android:id="@+id/check_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/check_name"
+        android:layout_alignBottom="@+id/text_sort"
+        android:layout_marginLeft="3dp"
+        android:layout_alignTop="@+id/text_sort" />
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#AFEEEE"
+        android:text="View"
+        android:layout_alignBaseline="@+id/check_age"
+        android:layout_alignBottom="@+id/check_age"
+        android:layout_alignStart="@+id/btn_update" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/text_sort"
+        android:layout_marginTop="20dp"
+        android:background="#AAAAAA"/>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_below="@+id/line2"
+        android:layout_marginTop="5dp"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+        <ListView
+            android:id="@+id/db_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:background="#AFEEEE"
+        android:text="Insert"
+        android:layout_above="@+id/edit_age"
+        android:layout_alignEnd="@+id/scroll_view" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:background="#AFEEEE"
+        android:layout_alignBottom="@+id/check_woman"
+        android:layout_alignStart="@+id/btn_insert" />
+
+
+</RelativeLayout>
