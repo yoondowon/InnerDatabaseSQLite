@@ -22,12 +22,12 @@ public class DbOpenHelper {
 
     private class DatabaseHelper extends SQLiteOpenHelper{
 
-        public DatabaseHelper(Context context, String name,CursorFactory factory, int version) {
+        public DatabaseHelper(Context context, String name, CursorFactory factory, int version) {
             super(context, name, factory, version);
         }
 
         @Override
-        public void onCreate(SQLiteDatabase db) {
+        public void onCreate(SQLiteDatabase db){
             db.execSQL(DataBases.CreateDB._CREATE0);
         }
 
@@ -48,8 +48,7 @@ public class DbOpenHelper {
         return this;
     }
 
-    public void create()
-    {
+    public void create(){
         mDBHelper.onCreate(mDB);
     }
 
