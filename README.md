@@ -1,5 +1,5 @@
 # InnerDatabaseSQLite
-Android code for connect to SQLite Database(Android Inner SQL Database)
+Android code for access to SQLite Database(Android Inner SQL Database)
 
 For more information on the blog: http://nife0719.blog.me/221035148567 
 
